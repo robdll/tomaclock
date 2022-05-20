@@ -4,18 +4,16 @@ import { useState } from 'react';
 function Tomato() {
     
     const [settings, setSettings] = useState({session: 25, break: 5});
+    const [timer, setTimer] = useState(25);
     
     const editSettings =  (type, val) => {
         const newSettings = { ...settings }
         newSettings[type] +=val;
-        if(newSettings[type] > 59) {
-            newSettings[type] = 59
+        if(newSettings[type] > 60) {
+            newSettings[type] = 60
         }
         if(newSettings[type] < 1) {
             newSettings[type] = 1
-        }
-        if(newSettings.session <= newSettings.break) {
-            newSettings.session = newSettings.break +1;
         }
         
         setSettings(newSettings)
