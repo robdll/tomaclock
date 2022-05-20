@@ -1,0 +1,15 @@
+.title {
+    color: white;
+    font-size: .7em;
+    margin: 0;
+}
+
+.setting-container, 
+.session-container,
+.controls-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
