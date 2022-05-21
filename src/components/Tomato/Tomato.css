@@ -22,10 +22,6 @@
     margin-bottom: 0;
 }
 
-.controls-container {
-
-}
-
 .icon-container {
     font-size: .5rem;
     cursor: pointer;
@@ -37,6 +33,9 @@
     font-size: .8rem;
 }
 
+.session-value {
+    padding: 5px;
+}
 .setting-container:last-of-type {
     margin: 0;
 }

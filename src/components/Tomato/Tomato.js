@@ -1,14 +1,72 @@
 import './Tomato.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faPause, faArrowsRotate, faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons'
 
 function Tomato() {
 	
 	const [settings, setSettings] = useState({session: 25, break: 5});
-	const [timer, setTimer] = useState({minutes: '25', seconds: '00'});
+	const [timer, setTimer] = useState({
+		minutes: '25', 
+		seconds: '00', 
+		active: false, 
+		isBreak: false
+	});
 	
+
+	useEffect(() => {
+		let timerInterval;
+		if(timer.active) {
+			timerInterval = setInterval(() => {
+				let seconds = parseInt(timer.seconds);
+				let minutes = parseInt(timer.minutes);
+				if(seconds === 0 && minutes === 0) {
+				 	setTimer( {
+				 		minutes: settings.isBreak ? settings.session : settings.break, 
+				 		seconds: '00', 
+				 		active: true, 
+				 		isBreak: !settings.isBreak
+				 	})
+				} else if(seconds === 0) {
+					const newTimer = {
+						...timer,
+						minutes: timer.minutes-1,
+						seconds: '59',
+					}
+				 	setTimer( newTimer)
+				} else {
+					seconds = seconds - 1;
+					setTimer( {
+						...timer,
+						seconds: seconds < 10 ? '0'+seconds : seconds+''
+					})
+				}
+			}, 100);
+		} else {
+			clearInterval(timerInterval);
+		}
+
+		return function cleanup() {
+			clearInterval(timerInterval);
+		};
+	}, [timer, settings]);
+
+
+	const toggleTimer = (value) => {
+		setTimer({ ...timer, active: value})
+	}
+
+	const refreshTimer = () => {
+		setTimer({ 
+			minutes: settings.session,
+			seconds: '00', 
+			active: false,
+			isBreak: false
+		})
+	}
+
 	const editSettings =  (type, val) => {
+		if(timer.active) return
 		const newSettings = { ...settings }
 		newSettings[type] +=val;
 		if(newSettings[type] > 60) {
@@ -18,23 +76,31 @@ function Tomato() {
 			newSettings[type] = 1
 		}
 		setSettings(newSettings)
+		if(type === 'session' && !timer.isBreak) {
+			setTimer({
+				...timer,
+				minutes: newSettings[type],
+				seconds: '00'
+			})
+		}
+		
 	}
-	
+
 	return (
 		<div className="Tomato">
 			
-			<h2 className="title">Session</h2>
+			<h2 className="title">{settings.isBreak ? 'Break' : 'Session'}</h2>
 			<div className="session-container">
 				<div className='session-value'>{timer.minutes}:{timer.seconds}</div>
 				<div className='controls-container'>
 					<span className='icon-container'>
-						<FontAwesomeIcon icon={faPlay} />
+						<FontAwesomeIcon onClick={()=>{ toggleTimer(true)}} icon={faPlay} />
 					</span>
 					<span className='icon-container'>
-						<FontAwesomeIcon icon={faPause} />
+						<FontAwesomeIcon onClick={()=>{ toggleTimer(false)}} icon={faPause} />
 					</span>
 					<span className='icon-container'>
-						<FontAwesomeIcon icon={faArrowsRotate} />
+						<FontAwesomeIcon onClick={()=>{ refreshTimer()}} icon={faArrowsRotate} />
 					</span>
 				</div>
 			</div>
