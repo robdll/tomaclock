@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/tomatlock/static/css/main.40fd3620.css",
-    "main.js": "/tomatlock/static/js/main.f5d4d718.js",
-    "static/js/787.374b0ed0.chunk.js": "/tomatlock/static/js/787.374b0ed0.chunk.js",
-    "static/media/alarm.wav": "/tomatlock/static/media/alarm.54f09e8ab9c181b3419a.wav",
-    "static/media/robdll-logo.svg": "/tomatlock/static/media/robdll-logo.964e94ce440dc7bb8871c8e0d03267e0.svg",
-    "index.html": "/tomatlock/index.html",
-    "main.40fd3620.css.map": "/tomatlock/static/css/main.40fd3620.css.map",
-    "main.f5d4d718.js.map": "/tomatlock/static/js/main.f5d4d718.js.map",
-    "787.374b0ed0.chunk.js.map": "/tomatlock/static/js/787.374b0ed0.chunk.js.map"
+    "main.css": "/tomaclock/static/css/main.40fd3620.css",
+    "main.js": "/tomaclock/static/js/main.536df319.js",
+    "static/js/787.374b0ed0.chunk.js": "/tomaclock/static/js/787.374b0ed0.chunk.js",
+    "static/media/alarm.wav": "/tomaclock/static/media/alarm.54f09e8ab9c181b3419a.wav",
+    "static/media/robdll-logo.svg": "/tomaclock/static/media/robdll-logo.964e94ce440dc7bb8871c8e0d03267e0.svg",
+    "index.html": "/tomaclock/index.html",
+    "main.40fd3620.css.map": "/tomaclock/static/css/main.40fd3620.css.map",
+    "main.536df319.js.map": "/tomaclock/static/js/main.536df319.js.map",
+    "787.374b0ed0.chunk.js.map": "/tomaclock/static/js/787.374b0ed0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.40fd3620.css",
-    "static/js/main.f5d4d718.js"
+    "static/js/main.536df319.js"
   ]
 }
