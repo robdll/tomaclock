@@ -1,10 +1,12 @@
 import './Tomato.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faPause, faArrowsRotate, faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons'
+const alarm = require('./../../resources/alarm.wav');
 
 function Tomato() {
-	
+	const audRef = useRef(null);
+
 	const [settings, setSettings] = useState({session: 25, break: 5});
 	const [timer, setTimer] = useState({
 		minutes: '25', 
@@ -27,6 +29,7 @@ function Tomato() {
 				 		active: true, 
 				 		isBreak: !settings.isBreak
 				 	})
+					playAudio()
 				} else if(seconds === 0) {
 					const newTimer = {
 						...timer,
@@ -41,7 +44,7 @@ function Tomato() {
 						seconds: seconds < 10 ? '0'+seconds : seconds+''
 					})
 				}
-			}, 100);
+			}, 1000);
 		} else {
 			clearInterval(timerInterval);
 		}
@@ -51,7 +54,12 @@ function Tomato() {
 		};
 	}, [timer, settings]);
 
+	const playAudio = () => {
+		console.log('here', audRef)
+		audRef.current.play();
+	}
 
+	  
 	const toggleTimer = (value) => {
 		setTimer({ ...timer, active: value})
 	}
@@ -126,8 +134,8 @@ function Tomato() {
 					<FontAwesomeIcon icon={faArrowUp} />
 				</span>
 			</div>
-			
-		</div>
+			<audio controls src={alarm} ref={audRef} hidden />
+			</div>
 		);
 	}
 	
