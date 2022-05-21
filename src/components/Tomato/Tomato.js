@@ -99,7 +99,7 @@ function Tomato() {
 	let icon = !timer.active ? faPlay : faPause;
 
 	return (
-		<div className="Tomato">
+		<div className="tomato">
 			
 			<h2 className="title" id="timer-label">{settings.isBreak ? 'Break' : 'Session'}</h2>
 			<div className="session-container">
