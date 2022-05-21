@@ -1,5 +1,6 @@
 # TomaClock
 
+Demo can be founde [Here](robertodilillo.dev/tomaclock). 
 Project bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Installation
@@ -18,7 +19,7 @@ Project bootstrapped with [Create React App](https://github.com/facebook/create-
 
 ## Build 
 
-### `npm run build`
+> `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -26,4 +27,9 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
+# Deploy
+
+This project allow to deploy directly on github pages just by running 
+
+> npm run deploy
 

@@ -2,7 +2,7 @@
   "name": "tomatlock",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://robdll.github.io/tomatlock",
+  "homepage": "https://robdll.github.io/tomaclock",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
