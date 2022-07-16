@@ -1,6 +1,6 @@
-import logo from './resources/robdll-logo.svg';
-import './App.css';
-import Tomato from './components/Tomato/Tomato.js';
+import logo from "./resources/robdll-logo.svg";
+import "./App.css";
+import Tomato from "./components/Tomato/Tomato.js";
 
 function App() {
   return (
@@ -10,7 +10,6 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
       </header>
       <Tomato></Tomato>
-
     </div>
   );
 }

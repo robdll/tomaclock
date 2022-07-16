@@ -1,52 +1,82 @@
 .tomato {
-    font-size: 2.2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    min-height: 50vh;
-    margin-top: 30px;
+  font-size: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 350px;
+  margin: 0 auto;
+  min-height: 50vh;
+  min-height: 50vh;
+  margin-top: 30px;
 }
-
 
 .title {
-    color: white;
-    font-size: .7em;
-    margin: 0;
+  color: white;
+  font-size: 0.7em;
+  margin: 0;
 }
 
-.setting-container, 
+.setting-container,
 .session-container,
 .controls-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .session-container {
-    flex-direction: column;
-    margin-bottom: 0;
+  flex-direction: column;
+  margin-bottom: 0;
 }
 
 .icon-container {
-    font-size: 1rem;
-    cursor: pointer;
-    margin: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 5px;
 }
 
-.session-value, .setting-value {
-    padding: 0 5px;
-    font-size: 1.5rem;
+.flexer {
+  flex: 1;
+}
+
+.session,
+.session-config,
+.break-config {
+  display: flex;
+  align-self: flex-start;
+  margin-bottom: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.session {
+  margin-top: 30px;
+}
+
+.session-container > .session-value {
+  font-size: 3rem;
+}
+
+.session-config > span,
+.session > span,
+.break-config > span {
+  margin-right: 20px;
+}
+
+.session-value,
+.setting-value {
+  padding: 0 5px;
+  font-size: 1.5rem;
 }
 
 .session-value {
-    padding: 5px;
+  padding: 5px;
 }
 .setting-container:last-of-type {
-    margin: 0;
+  margin: 0;
 }
