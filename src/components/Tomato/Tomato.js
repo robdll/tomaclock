@@ -60,8 +60,7 @@ function Tomato() {
   }, [timer, settings]);
 
   const playAudio = () => {
-    console.log("drin drin");
-    // audRef.current.play();
+    audRef.current.play();
   };
 
   const toggleTimer = (value) => {
