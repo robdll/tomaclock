@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/tomaclock/static/css/main.3bac7987.css",
-    "main.js": "/tomaclock/static/js/main.01fe7496.js",
+    "main.js": "/tomaclock/static/js/main.eb21de82.js",
     "static/js/787.374b0ed0.chunk.js": "/tomaclock/static/js/787.374b0ed0.chunk.js",
     "static/media/alarm.wav": "/tomaclock/static/media/alarm.54f09e8ab9c181b3419a.wav",
     "static/media/robdll-logo.svg": "/tomaclock/static/media/robdll-logo.964e94ce440dc7bb8871c8e0d03267e0.svg",
     "index.html": "/tomaclock/index.html",
     "main.3bac7987.css.map": "/tomaclock/static/css/main.3bac7987.css.map",
-    "main.01fe7496.js.map": "/tomaclock/static/js/main.01fe7496.js.map",
+    "main.eb21de82.js.map": "/tomaclock/static/js/main.eb21de82.js.map",
     "787.374b0ed0.chunk.js.map": "/tomaclock/static/js/787.374b0ed0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3bac7987.css",
-    "static/js/main.01fe7496.js"
+    "static/js/main.eb21de82.js"
   ]
 }
